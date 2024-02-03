@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+       colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
       ),
       home: const HomePage(),
@@ -107,13 +107,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               isScrollable: true,
               labelColor: Colors.orange,
               unselectedLabelColor: Colors.black,
-              tabs: [
-                const Tab(
+              tabs: const [
+                Tab(
                   child: Text("Mammals",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                   ),
                 ),
-                const Tab(
+                Tab(
                   child: Text(
                     "Birds",
                     style: TextStyle(
@@ -121,13 +121,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     ),
                   ),
                 ),
-                const Tab(
+                Tab(
                   child: Text(
                     "Reptiles",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                   ),
                 ),
-                const Tab(
+                Tab(
                   child: Text(
                     "Aquatic",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
@@ -140,11 +140,11 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               height: 500,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: animalList.length,
+                  itemCount: reptileList.length,
                   itemBuilder: (BuildContext context, index) {
                     return InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=>DetailsPage(animal:animalList[index])));
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>DetailsPage(animal:reptileList[index])));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(10),
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                             ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: CachedNetworkImage(
-                                  imageUrl: animalList[index].animalImage!,
+                                  imageUrl: reptileList[index].animalImage!,
                                   width: 300,
                                   height: 350,
                                   fit: BoxFit.cover,
@@ -162,7 +162,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                 )),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text( animalList[index].animalName!, style: const TextStyle(
+                              child: Text( reptileList[index].animalName!, style: const TextStyle(
                                   fontSize: 25,
                                   fontWeight:FontWeight.bold,
                                   color: Colors.white

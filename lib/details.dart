@@ -29,21 +29,21 @@ class _DetailsPageState extends State<DetailsPage> {
                   ),
                   color: Colors.orange
               ),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Text(widget.animal.animalName!,style: const TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
-                    const SizedBox(height: 10,),
-                    Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Text(widget.animal.animalInfo!,style: const TextStyle(fontSize: 18,color: Colors.white,)),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Text(widget.animal.animalName!,style: const TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold),),
+                        const SizedBox(height: 10,),
+                        Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Text(widget.animal.animalInfo!,style: const TextStyle(fontSize: 18,color: Colors.white,)),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
-            )),
+                  ),
+                )
+            ),
           ),
-
           Positioned(
             top: 40,
             left: 16,
@@ -58,8 +58,6 @@ class _DetailsPageState extends State<DetailsPage> {
               ),
             ),
           ),
-
-
         ],
       ),
     );
