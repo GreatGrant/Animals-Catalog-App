@@ -1,4 +1,7 @@
+import 'package:animals/models/data.dart';
 import 'package:flutter/material.dart';
+
+import 'details.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +31,15 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
+  late TabController _tabController;
+  
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +99,54 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           TabBar(
-              tabs: tabs
+              controller: _tabController,
+              indicatorColor: Colors.orangeAccent,
+              indicatorSize: TabBarIndicatorSize.label,
+              indicatorWeight: 4,
+              isScrollable: true,
+              labelColor: Colors.orange,
+              unselectedLabelColor: Colors.black,
+              tabs: [
+                const Tab(
+                  child: Text("Mammals",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                  ),
+                ),
+                const Tab(
+                  child: Text(
+                    "Birds",
+                    style: TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.w500
+                    ),
+                  ),
+                ),
+                const Tab(
+                  child: Text(
+                    "Reptiles",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                  ),
+                ),
+                const Tab(
+                  child: Text(
+                    "Aquatic",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                  ),
+                ),
+                SizedBox(
+                  height: 500,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: animalList.length,
+                      itemBuilder: (BuildContext context, index){
+                        return InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (_)=> DetailsPage(animal: animalList[index],)))
+                          },
+                          child: ,
+                        )
+                  }),
+                )
+              ]
           )
         ],
       ),
