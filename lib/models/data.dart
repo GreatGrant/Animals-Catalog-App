@@ -7,7 +7,7 @@ class Animal {
   Animal({this.animalName, this.animalType, this.animalImage, this.animalInfo});
 }
 
-List<Animal> reptileList = [
+List<Animal> mammalList = [
   Animal(
       animalName: "Lion",
       animalType: "Mammal",
@@ -46,6 +46,27 @@ List<Animal> birdsList = [
       animalType: "Bird",
       animalInfo: "The great horned owl is a large owl species found throughout the Americas. It is known for its distinctive ear tufts, large yellow eyes, and deep hooting call. Great horned owls are nocturnal hunters, preying on a variety of small mammals and birds.",
       animalImage: "https://www.nps.gov/subjects/birds/images/Great_Horned_Owl-01.jpg"
+  ),
+];
+
+List<Animal> reptilesList = [
+  Animal(
+      animalName: "Komodo Dragon",
+      animalType: "Reptile",
+      animalInfo: "The Komodo dragon is a large species of lizard found in the Indonesian islands of Komodo, Rinca, Flores, and Gili Motang. It is the largest living lizard species, known for its massive size, powerful jaws, and venomous bite.",
+      animalImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Komodo_Dragon_%28Varanus_komodoensis%29.jpg/1200px-Komodo_Dragon_%28Varanus_komodoensis%29.jpg"
+  ),
+  Animal(
+      animalName: "Snake",
+      animalType: "Reptile",
+      animalInfo: "Snakes are elongated, legless reptiles that are found in various habitats around the world. They are carnivorous predators, feeding on a wide range of prey including rodents, birds, and other reptiles. Some species of snakes are venomous, while others are non-venomous.",
+      animalImage: "https://img.freepik.com/free-photo/dry-leaf-snake-wooden-background_144627-10701.jpg?size=626&ext=jpg"
+  ),
+  Animal(
+      animalName: "Green Anaconda",
+      animalType: "Reptile",
+      animalInfo: "The green anaconda is one of the largest snake species in the world, native to South America. It is a non-venomous constrictor known for its immense size and strength. Green anacondas are excellent swimmers and primarily inhabit aquatic environments such as swamps, marshes, and slow-moving rivers.",
+      animalImage: "https://img.freepik.com/free-photo/green-anaconda-eunectes-murinus_74190-1153.jpg?size=626&ext=jpg"
   ),
 ];
 

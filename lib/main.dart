@@ -1,3 +1,4 @@
+import 'package:animals/animal_listview.dart';
 import 'package:animals/models/data.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -34,13 +35,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
   late TabController _tabController;
-  
+  late int _index;
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 4, vsync: this);
+    _index = 0;
   }
   
+  void _onTabSelected(int index){
+    setState(() {
+      _index = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,6 +114,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               isScrollable: true,
               labelColor: Colors.orange,
               unselectedLabelColor: Colors.black,
+              onTap: _onTabSelected,
               tabs: const [
                 Tab(
                   child: Text("Mammals",
@@ -134,47 +142,35 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   ),
                 ),
               ]),
-          Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: SizedBox(
-              height: 500,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: reptileList.length,
-                  itemBuilder: (BuildContext context, index) {
-                    return InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=>DetailsPage(animal:reptileList[index])));
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Stack(
-                          children: [
-                            ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: CachedNetworkImage(
-                                  imageUrl: reptileList[index].animalImage!,
-                                  width: 300,
-                                  height: 350,
-                                  fit: BoxFit.cover,
-                                  placeholder: (context, url) => const CircularProgressIndicator(),
-                                  errorWidget: (context, url, error) => const Icon(Icons.error),
-                                )),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text( reptileList[index].animalName!, style: const TextStyle(
-                                  fontSize: 25,
-                                  fontWeight:FontWeight.bold,
-                                  color: Colors.white
-                              ),),
-                            )
-                          ],
-                        ),
-                      ),
-                    );
-                  }),
-            ),
-          ),
+          Expanded(
+              child: IndexedStack(
+                index: _index,
+                children: [
+                  AnimalListView(animalList: mammalList, onTap: (Animal animal) {
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (_)=>DetailsPage(animal: mammalList[_index]
+                        )
+                    )
+                    ); },),
+                  AnimalListView(animalList: birdsList, onTap: (Animal animal) { Navigator.push(context, MaterialPageRoute(
+                      builder: (_)=>DetailsPage(animal: birdsList[_index]
+                      )
+                  )
+                  ); },),
+                  AnimalListView(animalList: reptilesList, onTap: (Animal animal){Navigator.push(context, MaterialPageRoute(
+                      builder: (_)=>DetailsPage(animal: reptilesList[_index]
+                      )
+                  )
+                  ); },),
+                  AnimalListView(animalList: aquaticList, onTap: (Animal animal){Navigator.push(context, MaterialPageRoute(
+                      builder: (_)=>DetailsPage(animal: aquaticList[_index]
+                      )
+                  )
+                  ); },),
+                ],
+
+          ))
+
         ],
       ),
     );
