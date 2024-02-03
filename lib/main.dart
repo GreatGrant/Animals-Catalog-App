@@ -132,22 +132,46 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                   ),
                 ),
-                SizedBox(
-                  height: 500,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: animalList.length,
-                      itemBuilder: (BuildContext context, index){
-                        return InkWell(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=> DetailsPage(animal: animalList[index],)))
-                          },
-                          child: ,
-                        )
+              ]),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: SizedBox(
+              height: 500,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: animalList.length,
+                  itemBuilder: (BuildContext context, index) {
+                    return InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>DetailsPage(animal:animalList[index])));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Stack(
+                          children: [
+                            ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.network(
+                                  animalList[index].animalImage!,
+                                  width: 300,
+                                  height: 350,
+                                  fit: BoxFit.cover,
+                                )),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text( animalList[index].animalName!, style: const TextStyle(
+                                  fontSize: 25,
+                                  fontWeight:FontWeight.bold,
+                                  color: Colors.white
+                              ),),
+                            )
+                          ],
+                        ),
+                      ),
+                    );
                   }),
-                )
-              ]
-          )
+            ),
+          ),
         ],
       ),
     );
