@@ -15,6 +15,7 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.orange,
       body: Stack(
         children: [
           CachedNetworkImage(imageUrl: widget.animal.animalImage!,height: 300,width:double.infinity,fit: BoxFit.cover,),
