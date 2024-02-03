@@ -1,4 +1,5 @@
 import 'package:animals/models/data.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'details.dart';
@@ -151,11 +152,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                           children: [
                             ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
-                                child: Image.network(
-                                  animalList[index].animalImage!,
+                                child: CachedNetworkImage(
+                                  imageUrl: animalList[index].animalImage!,
                                   width: 300,
                                   height: 350,
                                   fit: BoxFit.cover,
+                                  placeholder: (context, url) => const CircularProgressIndicator(),
+                                  errorWidget: (context, url, error) => const Icon(Icons.error),
                                 )),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
