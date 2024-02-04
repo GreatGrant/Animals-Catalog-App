@@ -33,19 +33,19 @@ List<Animal> birdsList = [
       animalName: "Bald Eagle",
       animalType: "Bird",
       animalInfo: "The bald eagle is a bird of prey found in North America. It is the national bird and symbol of the United States of America. Bald eagles are known for their striking white head and tail, and powerful hooked beak.",
-      animalImage: "https://www.nps.gov/glac/learn/nature/images/Bald_Eagle_Proud_2.jpg"
+      animalImage: "https://img.freepik.com/free-photo/closeup-shot-bald-eagle-tree-branch-looking-its-prey_181624-29341.jpg?w=740&t=st=1707083824~exp=1707084424~hmac=e9cee16bb7764429ac977f18083e4b810c7192b9b592f46b638c54ebe6e76f62"
   ),
   Animal(
       animalName: "Peregrine Falcon",
       animalType: "Bird",
       animalInfo: "The peregrine falcon is a widespread bird of prey known for its speed and agility. It is one of the fastest animals in the world, capable of reaching speeds over 240 miles per hour when diving. Peregrine falcons are found on every continent except Antarctica.",
-      animalImage: "https://www.nps.gov/subjects/birds/images/Peregrine-Falcon-01.jpg"
+      animalImage: "https://img.freepik.com/free-photo/vertical-selective-focus-shot-magnificent-golden-eagle-with-blurred-natural-space_181624-47411.jpg?t=st=1707083960~exp=1707084560~hmac=3e5665eb10d434c3f9541843829854e57e0a179875bab37e7bf27ddba254a36c"
   ),
   Animal(
       animalName: "Great Horned Owl",
       animalType: "Bird",
       animalInfo: "The great horned owl is a large owl species found throughout the Americas. It is known for its distinctive ear tufts, large yellow eyes, and deep hooting call. Great horned owls are nocturnal hunters, preying on a variety of small mammals and birds.",
-      animalImage: "https://www.nps.gov/subjects/birds/images/Great_Horned_Owl-01.jpg"
+      animalImage: "https://img.freepik.com/free-vector/owl_53876-59176.jpg?w=360&t=st=1707084319~exp=1707084919~hmac=d0af0427ffff24bf7095bb5641af25f901daeff5bd282ff2e620d76f336e025a"
   ),
 ];
 
