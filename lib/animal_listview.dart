@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'details.dart';
 import 'models/data.dart';
 
 class AnimalListView extends StatelessWidget {
   final List<Animal> animalList;
-  final Function(Animal) onTap;
 
   const AnimalListView({
     Key? key,
     required this.animalList,
-    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -23,7 +22,11 @@ class AnimalListView extends StatelessWidget {
             itemCount: animalList.length,
             itemBuilder: (BuildContext context, index) {
               return InkWell(
-                onTap: () => onTap(animalList[index]),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                  builder: (_)=> DetailsPage(animal: animalList[index]))
+                  );
+                },
                 child: Padding(
                   padding: const EdgeInsets.all(10),
                   child: Stack(

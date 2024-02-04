@@ -39,13 +39,13 @@ List<Animal> birdsList = [
       animalName: "Peregrine Falcon",
       animalType: "Bird",
       animalInfo: "The peregrine falcon is a widespread bird of prey known for its speed and agility. It is one of the fastest animals in the world, capable of reaching speeds over 240 miles per hour when diving. Peregrine falcons are found on every continent except Antarctica.",
-      animalImage: "https://img.freepik.com/free-photo/vertical-selective-focus-shot-magnificent-golden-eagle-with-blurred-natural-space_181624-47411.jpg?t=st=1707083960~exp=1707084560~hmac=3e5665eb10d434c3f9541843829854e57e0a179875bab37e7bf27ddba254a36c"
+      animalImage: "https://www.allaboutbirds.org/guide/assets/photo/303618951-1280px.jpg"
   ),
   Animal(
       animalName: "Great Horned Owl",
       animalType: "Bird",
       animalInfo: "The great horned owl is a large owl species found throughout the Americas. It is known for its distinctive ear tufts, large yellow eyes, and deep hooting call. Great horned owls are nocturnal hunters, preying on a variety of small mammals and birds.",
-      animalImage: "https://img.freepik.com/free-vector/owl_53876-59176.jpg?w=360&t=st=1707084319~exp=1707084919~hmac=d0af0427ffff24bf7095bb5641af25f901daeff5bd282ff2e620d76f336e025a"
+      animalImage: "https://www.birdnote.org/sites/default/files/Great-Horned-Owl-Tucson-800-Mick-Thompson-CC.jpg"
   ),
 ];
 

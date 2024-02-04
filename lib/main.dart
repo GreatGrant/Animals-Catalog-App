@@ -142,31 +142,16 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   ),
                 ),
               ]),
-          Expanded(
+          const SizedBox(height: 20,),
+          SizedBox(
+              height: 500,
               child: IndexedStack(
                 index: _index,
                 children: [
-                  AnimalListView(animalList: mammalList, onTap: (Animal animal) {
-                    Navigator.push(context, MaterialPageRoute(
-                        builder: (_)=>DetailsPage(animal: mammalList[_index]
-                        )
-                    )
-                    ); },),
-                  AnimalListView(animalList: birdsList, onTap: (Animal animal) { Navigator.push(context, MaterialPageRoute(
-                      builder: (_)=>DetailsPage(animal: birdsList[_index]
-                      )
-                  )
-                  ); },),
-                  AnimalListView(animalList: reptilesList, onTap: (Animal animal){Navigator.push(context, MaterialPageRoute(
-                      builder: (_)=>DetailsPage(animal: reptilesList[_index]
-                      )
-                  )
-                  ); },),
-                  AnimalListView(animalList: aquaticList, onTap: (Animal animal){Navigator.push(context, MaterialPageRoute(
-                      builder: (_)=>DetailsPage(animal: aquaticList[_index]
-                      )
-                  )
-                  ); },),
+                  AnimalListView(animalList: mammalList),
+                  AnimalListView(animalList: birdsList),
+                  AnimalListView(animalList: reptilesList),
+                  AnimalListView(animalList: aquaticList),
                 ],
 
           ))
