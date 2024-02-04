@@ -75,18 +75,18 @@ List<Animal> aquaticList = [
       animalName: "Dolphin",
       animalType: "Aquatic",
       animalInfo: "Dolphins are highly intelligent marine mammals known for their playful behavior and social nature. They are found in oceans and seas around the world and are well-adapted to aquatic life. Dolphins communicate using a variety of sounds and clicks and feed on fish and squid.",
-      animalImage: "https://img.freepik.com/free-photo/dolphin-swimming-blue-water_74190-550.jpg?size=626&ext=jpg"
+      animalImage: "https://img.freepik.com/free-photo/playful-bottle-nosed-dolphin-jumping-tropical-waters-generated-by-ai_188544-29599.jpg?t=st=1707085155~exp=1707088755~hmac=b4d1874b0c71df5a370bc769c31f7cb05ed59457dc575509f60a596cc8f9752c&w=826"
   ),
   Animal(
       animalName: "Great White Shark",
       animalType: "Aquatic",
       animalInfo: "The great white shark is a large predatory fish found in oceans around the world. It is one of the most feared and well-known shark species, known for its powerful jaws and serrated teeth. Great white sharks are apex predators, feeding on a variety of marine animals including seals, sea lions, and other sharks.",
-      animalImage: "https://img.freepik.com/free-photo/great-white-shark-swimming-underwater_74190-550.jpg?size=626&ext=jpg"
+      animalImage: "https://img.freepik.com/free-photo/shark-sea_181624-17254.jpg?w=740&t=st=1707085096~exp=1707085696~hmac=6ea45a530a94a3e2f221e2c5c14da7b5d3dd62914c5331425a4b5d8e35cfc728"
   ),
   Animal(
       animalName: "Sea Turtle",
       animalType: "Aquatic",
       animalInfo: "Sea turtles are marine reptiles found in oceans and seas worldwide. They are characterized by their bony shells and streamlined bodies, which help them navigate through the water. Sea turtles are long-lived animals that undertake long migrations between their nesting and feeding grounds.",
-      animalImage: "https://img.freepik.com/free-photo/sea-turtle-swimming-underwater_74190-550.jpg?size=626&ext=jpg"
+      animalImage: "https://img.freepik.com/free-photo/closeup-shot-beautiful-turtle-swimming-sea_181624-21868.jpg?w=740&t=st=1707085573~exp=1707086173~hmac=36cb884168c4a0a9710bc1fa6154244a826d6cb977068a9639dc47a4bd76b6c6"
   ),
 ];
