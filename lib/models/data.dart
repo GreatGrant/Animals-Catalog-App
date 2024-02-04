@@ -54,19 +54,19 @@ List<Animal> reptilesList = [
       animalName: "Komodo Dragon",
       animalType: "Reptile",
       animalInfo: "The Komodo dragon is a large species of lizard found in the Indonesian islands of Komodo, Rinca, Flores, and Gili Motang. It is the largest living lizard species, known for its massive size, powerful jaws, and venomous bite.",
-      animalImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Komodo_Dragon_%28Varanus_komodoensis%29.jpg/1200px-Komodo_Dragon_%28Varanus_komodoensis%29.jpg"
+      animalImage: "https://img.freepik.com/free-photo/beautiful-shot-iguana-sitting-stone_181624-32061.jpg?t=st=1707084633~exp=1707085233~hmac=54a0e943ceeb044436c33eb0e254993d67247ec09b202952a72571083e4d4f49"
   ),
   Animal(
       animalName: "Snake",
       animalType: "Reptile",
       animalInfo: "Snakes are elongated, legless reptiles that are found in various habitats around the world. They are carnivorous predators, feeding on a wide range of prey including rodents, birds, and other reptiles. Some species of snakes are venomous, while others are non-venomous.",
-      animalImage: "https://img.freepik.com/free-photo/dry-leaf-snake-wooden-background_144627-10701.jpg?size=626&ext=jpg"
+      animalImage: "https://img.freepik.com/free-photo/boiga-snake-dendrophila-yellow-ringed-stalking-prey-head-boiga-dendrophila-animal-closeup_488145-3560.jpg?t=st=1707084720~exp=1707085320~hmac=3238d279e791e58e88e7378548e6c27ef83b84b403b7131516acf72630ffefa8"
   ),
   Animal(
       animalName: "Green Anaconda",
       animalType: "Reptile",
       animalInfo: "The green anaconda is one of the largest snake species in the world, native to South America. It is a non-venomous constrictor known for its immense size and strength. Green anacondas are excellent swimmers and primarily inhabit aquatic environments such as swamps, marshes, and slow-moving rivers.",
-      animalImage: "https://img.freepik.com/free-photo/green-anaconda-eunectes-murinus_74190-1153.jpg?size=626&ext=jpg"
+      animalImage: "https://img.freepik.com/free-photo/copperheaded-trinket-snake-ready-attack_488145-1395.jpg?t=st=1707084770~exp=1707085370~hmac=d87b02d32dee2529cc9a0ce79a9835ed04badbf0d944084982f6c66b35486ac7"
   ),
 ];
 
